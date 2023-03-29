@@ -1,0 +1,25 @@
+{
+  "name": "apistore-react",
+  "version": "1.0.0",
+  "description": "TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project.",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "npx cdk --app \"npx ts-node ./aws/backend-deploy.ts\" deploy --progress events ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "qest@vs-ssh.visualstudio.com:v3/qest/Qest/apistore-react"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "aws-cdk": "^2.71.0",
+    "aws-cdk-lib": "^2.71.0",
+    "constructs": "^10.1.295",
+    "qest-ecs-cluster": "^1.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  }
+}
