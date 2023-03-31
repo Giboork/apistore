@@ -1,0 +1,14 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.faq-btn:focus-within,
+.faq-btn.active {
+    background-color: #edf2f7;
+}
+.faq-answer.active {
+    display: block;
+}
+.faq-answer {
+    display: none;
+}
