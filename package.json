@@ -34,14 +34,11 @@
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.3.0",
-
-
     "aws-cdk": "^2.71.0",
     "aws-cdk-lib": "^2.71.0",
     "constructs": "^10.1.295",
     "qest-ecs-cluster": "^1.0.1",
-    "ts-node": "^10.9.1",
-
+    "ts-node": "^10.9.1"
   }
 }
 
