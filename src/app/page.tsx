@@ -80,9 +80,6 @@ export default async function Home() {
         </div>
     </Container>
 
-    <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
-        Some basic informations about API Store ®.
-    </SectionTitle>
 </div>
 
 

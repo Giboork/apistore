@@ -5,8 +5,8 @@ import { FC } from "react";
 
 export interface TestimonialCardProps {
     title: string;
-    description: string;
     publisher: string;
+    modified: string;
     publisherUrl: string;
     itemUrl: string;
 }
@@ -21,8 +21,8 @@ function Mark(props: any) {
 }
 const TestimonialBase: FC<TestimonialCardProps> = ({
                                                        title,
-                                                       description,
                                                        publisher,
+                                                       modified,
                                                        publisherUrl,
                                                        itemUrl,
                                                    }) => {
@@ -35,8 +35,9 @@ const TestimonialBase: FC<TestimonialCardProps> = ({
                             Open Data
                         </mark>
                 </p>
-                <p className="leading-normal pt-2">{description}</p>
                 <p className="leading-normal ">{publisher}</p>
+
+                <p className="leading-normal ">Issued on {modified}</p>
 
                 <div className="flex items-center mt-8 space-x-3">
                     <div>

@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Container from "./container";
 
-
+import AvaitIcon from "./../img/svg/avait.svg";
+import UnlimitedIcon from "./../img/svg/unlimited.svg";
+import Case from "./../img/svg/case.svg";
 import benefitOneImg from "./../img/benefit-one.png";
 
 const benefitOne = {
@@ -12,14 +14,17 @@ const benefitOne = {
         {
             title: "Unlimited requests",
             desc: "With your private API key, you will get rid of all limits and restrictions with data consumption.",
+            icon:   UnlimitedIcon
         },
         {
             title: "Always available",
             desc: "We are using scalable cloud solution for providing our APIs. We refresh data on regular bases based on your need. We keep track of versions so you do not have to.",
+            icon:   AvaitIcon
         },
         {
             title: "Fits right into your use case",
             desc: "You can connect our API directly in your application to query and filter data as you need instead downloading full datasets and store them within your infrastructure.",
+            icon:   Case
         },
     ],
 };
@@ -46,8 +51,10 @@ export default function Benefits(props: any) {
                     </div>
                 </div>
 
+
+
                 <div
-                    className={`flex flex-wrap items-center w-full lg:w-1/2 lg:justify-end`}>
+                    className="flex flex-wrap items-center w-full lg:w-1/2 right">
                     <div>
                         <div className="flex flex-col w-full mt-4">
                             <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
@@ -61,7 +68,7 @@ export default function Benefits(props: any) {
 
                         <div className="w-full mt-5">
                             {benefitOne.bullets.map((item, index) => (
-                                <Benefit key={index} title={item.title} >
+                                <Benefit key={index} title={item.title} icon={item.icon}>
                                     {item.desc}
                                 </Benefit>
                             ))}
@@ -78,7 +85,16 @@ function Benefit(props: any) {
         <>
             <div className="flex items-start mt-8 space-x-3">
                 <div className="flex items-center justify-center flex-shrink-0 mt-1 bg-blue-500 rounded-md w-11 h-11 ">
-
+                    <div className="w-7 h-7 ">
+                    <Image
+                        src={props.icon}
+                        layout="responsive"
+                        alt="Powered by Revolgy"
+                        width="300"
+                        height="60"
+                        className="w-7 h-7 text-blue-50"
+                    />
+                </div>
                 </div>
                 <div>
                     <h4 className="text-xl font-medium text-gray-800 dark:text-gray-200">
