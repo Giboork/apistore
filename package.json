@@ -9,7 +9,7 @@
     "start": "next start -p 8000",
     "build:css": "tailwindcss -i src/style.css -o public/style.css --minify",
     "lint": "next lint",
-    "deploy": "npx cdk --app \"npx ts-node ./aws/backend-deploy.ts\" deploy --progress events ",
+    "deploy": "npx cdk --app \"npx ts-node --project ./aws/tsconfig.json ./aws/backend-deploy.ts\" deploy --progress events ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

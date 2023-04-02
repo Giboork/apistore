@@ -19,7 +19,8 @@ export class BackendStack extends Stack {
             },
             containerDefinition: {
                 image: ContainerImage.fromAsset(path.join(__dirname, '..', '..')),
-                memoryLimitMiB: 128,
+                memoryLimitMiB: 512,
+                memoryReservationMiB: 128,
             }
         });
     }

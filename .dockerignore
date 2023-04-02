@@ -1,0 +1,7 @@
+.next
+.vscode
+.idea
+cdk.context.json
+cdk.out
+node_modules
+aws
