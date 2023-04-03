@@ -29,9 +29,9 @@ export default function Footer() {
                             <span>How much does it cost to use our APIs?</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                                  className="transform rotate-180 w-5 h-5 text-blue-500">
-                                <path fill-rule="evenodd"
+                                <path fillRule="evenodd"
                                       d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
-                                      clip-rule="evenodd"></path>
+                                      clipRule="evenodd" />
                             </svg>
                         </button>
                         <div className="px-4 pt-4 pb-2 text-gray-500 dark:text-gray-300"
@@ -47,9 +47,9 @@ export default function Footer() {
                             <span>Can I use it in a commercial project?</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                                  className="transform rotate-180 w-5 h-5 text-blue-500">
-                                <path fill-rule="evenodd"
+                                <path fillRule="evenodd"
                                       d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
-                                      clip-rule="evenodd"></path>
+                                      clipRule="evenodd" />
                             </svg>
                         </button>
                         <div className="px-4 pt-4 pb-2 text-gray-500 dark:text-gray-300"
@@ -63,9 +63,9 @@ export default function Footer() {
                             aria-controls="headlessui-disclosure-panel-8"><span>How I will know that data in API were updated?</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                                  className="transform rotate-180 w-5 h-5 text-blue-500">
-                                <path fill-rule="evenodd"
+                                <path fillRule="evenodd"
                                       d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
-                                      clip-rule="evenodd"></path>
+                                      clipRule="evenodd" />
                             </svg>
                         </button>
                         <div className="px-4 pt-4 pb-2 text-gray-500 dark:text-gray-300"
@@ -80,9 +80,9 @@ export default function Footer() {
                             aria-controls="headlessui-disclosure-panel-10"><span>What happens in case we issue new version of API?</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                                  className="transform rotate-180 w-5 h-5 text-blue-500">
-                                <path fill-rule="evenodd"
+                                <path fillRule="evenodd"
                                       d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
-                                      clip-rule="evenodd"></path>
+                                      clipRule="evenodd" />
                             </svg>
                         </button>
                         <div className="px-4 pt-4 pb-2 text-gray-500 dark:text-gray-300"
@@ -136,7 +136,7 @@ export default function Footer() {
                             <a
                                 href="https://www.revolgy.com/"
                                 target="_blank"
-                                rel="noopener"
+                                rel="noopener noreferrer"
                                 className="relative block w-44">
                                 <span>Powered by</span>
                                 <span>

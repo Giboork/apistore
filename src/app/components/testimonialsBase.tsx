@@ -25,8 +25,7 @@ const TestimonialBase: FC<TestimonialCardProps> = ({
                                                        modified,
                                                        publisherUrl,
                                                        itemUrl,
-                                                   }) => {
-    return (
+                                                   }) => (
         <Link href={`${itemUrl}`}>
             <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
                 <p className="text-2xl leading-normal">
@@ -47,6 +46,5 @@ const TestimonialBase: FC<TestimonialCardProps> = ({
             </div>
         </Link>
     );
-};
 
 export default TestimonialBase

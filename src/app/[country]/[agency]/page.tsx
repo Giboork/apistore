@@ -1,15 +1,15 @@
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
+import {notFound} from "next/navigation";
 import { getDatasetCollection} from "../../modules/db/connect";
 import {addApiSuffix, removeApiSuffix} from "../../tool/url";
 import TestimonialBase from "../../components/testimonialsBase";
-import Container from "./../../components/container";
+import Container from "../../components/container";
 import { truncateText} from "../../tool/string";
 import Pagination from "../../components/pagination";
 import {formatISODate} from "../../tool/date";
 import AccessBlock from "../../components/access";
 import Technology from "../../components/technology";
-import {notFound} from "next/navigation";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -144,6 +144,4 @@ export default async function Home(a: any) {
     );
 }
 
-<style>
-
-</style>
+<style />

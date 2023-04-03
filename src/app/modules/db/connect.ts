@@ -25,7 +25,7 @@ export let datasetCollection: Collection<Dataset>;
 
 const mongoConnect = async (): Promise<MongoClient> => {
     if (!client) {
-        const uri = 'mongodb://localhost'
+        const uri = 'mongodb+srv://doadmin:65g7H4P912TNJU3Y@db-mongodb-fra1-51989-bc9817ed.mongo.ondigitalocean.com/admin?tls=true&authSource=admin'
         client = await MongoClient.connect(uri, { useNewUrlParser: true } as any);
     }
 
@@ -35,7 +35,7 @@ const mongoConnect = async (): Promise<MongoClient> => {
 export const getDatasetCollection = async (): Promise<Collection<Dataset>> => {
     if (!datasetCollection) {
         const client = await mongoConnect();
-        datasetCollection = client.db('mydatabase1').collection<Dataset>('dataset_ids_new');
+        datasetCollection = client.db('a').collection<Dataset>('asd');
     }
 
     return datasetCollection;

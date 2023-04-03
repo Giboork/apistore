@@ -1,10 +1,9 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from './page.module.css'
 import { MongoClient } from 'mongodb';
 import Head from 'next/head'
-const inter = Inter({ subsets: ['latin'] })
 import Link from 'next/link';
+import styles from './page.module.css'
 import {getDatasetCollection} from "./modules/db/connect";
 import {addApiSuffix} from "./tool/url";
 import Hero from "./components/hero";
@@ -13,6 +12,8 @@ import Benefits from "./components/benefits";
 import Testimonials from "./components/testimonials";
 import userTwoImg from "../../public/img/flags/eu.svg";
 import Container from "./components/container";
+
+const inter = Inter({ subsets: ['latin'] })
 
 export default async function Home() {
     const connect = await getDatasetCollection()
@@ -114,6 +115,4 @@ function Mark(props: any) {
 }
 
 
-<style>
-
-</style>
+<style />

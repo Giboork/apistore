@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Container from "./container";
 
-import AvaitIcon from "./../img/svg/avait.svg";
-import UnlimitedIcon from "./../img/svg/unlimited.svg";
-import Case from "./../img/svg/case.svg";
-import benefitOneImg from "./../img/benefit-one.png";
+import AvaitIcon from "../img/svg/avait.svg";
+import UnlimitedIcon from "../img/svg/unlimited.svg";
+import Case from "../img/svg/case.svg";
+import benefitOneImg from "../img/benefit-one.png";
 
 const benefitOne = {
     title: "Fast, scalable and reliable solution",
@@ -35,10 +35,9 @@ export default function Benefits(props: any) {
     benefitOne
 
     return (
-        <>
-            <Container className="flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap ">
+        <Container className="flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap ">
                 <div
-                    className={`flex items-center justify-center w-full lg:w-1/2 g:order-1`}>
+                    className="flex items-center justify-center w-full lg:w-1/2 g:order-1">
                     <div>
                         <Image
                             src={benefitOne.image}
@@ -76,14 +75,12 @@ export default function Benefits(props: any) {
                     </div>
                 </div>
             </Container>
-        </>
     );
 }
 
 function Benefit(props: any) {
     return (
-        <>
-            <div className="flex items-start mt-8 space-x-3">
+        <div className="flex items-start mt-8 space-x-3">
                 <div className="flex items-center justify-center flex-shrink-0 mt-1 bg-blue-500 rounded-md w-11 h-11 ">
                     <div className="w-7 h-7 ">
                     <Image
@@ -105,6 +102,5 @@ function Benefit(props: any) {
                     </p>
                 </div>
             </div>
-        </>
     );
 }

@@ -1,9 +1,9 @@
+import {notFound} from "next/navigation";
 import {getDatasetCollection} from "../../../modules/db/connect";
 import {removeApiSuffix} from "../../../tool/url";
 import Container from "../../../components/container";
 import AccessBlock from "../../../components/access";
 import Technology from "../../../components/technology";
-import {notFound} from "next/navigation";
 
 
 export default async function Home(a: any) {
@@ -100,6 +100,4 @@ export default async function Home(a: any) {
   )
 }
 
-<style>
-
-</style>
+<style />

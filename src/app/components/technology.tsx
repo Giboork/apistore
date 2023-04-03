@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import RevolgyLogo from "./../img/Revolgy_Logo.svg";
+import RevolgyLogo from "../img/Revolgy_Logo.svg";
 
 export default function technology() {
 

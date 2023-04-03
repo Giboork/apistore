@@ -1,7 +1,3 @@
-export const addApiSuffix = (url: string) => {
-   return  url + "-api";
-};
+export const addApiSuffix = (url: string) => `${url  }-api`;
 
-export const removeApiSuffix = (url: string) => {
-    return  url.replace("-api", "");
-};
+export const removeApiSuffix = (url: string) => url.replace("-api", "");
