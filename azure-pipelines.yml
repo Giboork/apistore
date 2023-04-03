@@ -1,0 +1,20 @@
+trigger:
+  - master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - task: NodeTool@0
+    displayName: 'Use Node 18.x'
+    inputs:
+      versionSpec: 18.x
+
+  - task: Npm@1
+    displayName: 'Install packages'
+    inputs:
+      command: 'install'
+
+  - script: |
+      npm run deploy
+    displayName: 'Deploy'

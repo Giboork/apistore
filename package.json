@@ -9,7 +9,7 @@
     "start": "next start -p 8000",
     "build:css": "tailwindcss -i src/style.css -o public/style.css --minify",
     "lint": "next lint",
-    "deploy": "npx cdk --app \"npx ts-node --project ./aws/tsconfig.json ./aws/backend-deploy.ts\" deploy --progress events ",
+    "deploy": "npx cdk --app \"npx ts-node --project ./aws/tsconfig.json ./aws/backend-deploy.ts\" deploy --progress events --require-approval never",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -37,7 +37,7 @@
     "aws-cdk": "^2.71.0",
     "aws-cdk-lib": "^2.71.0",
     "constructs": "^10.1.295",
-    "qest-ecs-cluster": "^1.0.1",
+    "qest-ecs-cluster": "^1.0.2",
     "ts-node": "^10.9.1"
   }
 }
