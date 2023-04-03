@@ -9,7 +9,7 @@ export class BackendStack extends Stack {
         super(scope, id, props);
 
         new QestEcsDeployment(this, 'deployment', {
-            network: {
+            internetNetwork: {
                 lbPriority: 1,
                 subdomain: 'apistore',
             },
