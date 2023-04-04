@@ -12,8 +12,6 @@ export default async function Home(a: any) {
     const connect = await getDatasetCollection()
     const country = await connect.findOne({"data.title.en_url": removeApiSuffix(a.params.dataset) } ) as any ;
 
-    console.log(country, 'countrycountry')
-
     if(!country) {
         notFound()
     }
@@ -65,7 +63,6 @@ export default async function Home(a: any) {
               </div>
           </Container>
           <div className="container mx-auto px-4 py-5">
-              asdsad {country._id}
               <div
                   className="container p-8 mx-classNamexl:px-0 flex w-full flex-col mt-4 items-center justify-center text-center">
                   <h2 className="max-w-2xl mt-3 teclassNamel font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">Dataset information</h2></div>
