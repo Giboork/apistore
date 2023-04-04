@@ -9,8 +9,6 @@ import {Dataset} from "../modules/db/interface";
 import {addApiSuffix} from "../tool/url";
 
 export default function Testimonials(a: {aa: any[]}) {
-    console.log(a, 'aaaaaa')
-
     return (
         <Container>
             <div>

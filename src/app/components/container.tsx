@@ -1,11 +1,17 @@
+interface Props {
+    className?: string;
+    p?: number;
+    children: any
+}
 
-export default function Container(props: any) {
+const Container: React.FC<Props> = ({ className = '', p = 8, children }) => {
     return (
         <div
-            className={`container p-8 mx-auto xl:px-0 ${
-                props.className ? props.className : ""
-            }`}>
-            {props.children}
+            className={`container p-${p} mx-auto xl:px-0 ${className ? className : ""}`}
+        >
+            {children}
         </div>
     );
-}
+};
+
+export default Container;

@@ -19,6 +19,11 @@ export default async function Home() {
     const connect = await getDatasetCollection()
 
    const  aa = await connect.aggregate([
+       {
+           $match: {
+               'data.country.label': { $ne: null }
+           }
+       },
         {
             $group: {
                 _id: '$data.country.label',

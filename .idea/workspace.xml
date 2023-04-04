@@ -2,26 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7aaa7ee7-f29d-44b5-9cf9-58fb887287a2" name="Default Changelist" comment="init">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/navigationBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[country]/[agency]/[dataset]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[country]/[agency]/[dataset]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[country]/[agency]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[country]/[agency]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[country]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[country]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/access.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/access.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/benefits.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/benefits.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/faqClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/faqClient.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/container.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/technology.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/technology.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/testimonials.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/testimonials.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/testimonialsBase.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/testimonialsBase.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/modules/db/connect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/db/connect.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/tool/string.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tool/string.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/tool/url.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tool/url.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tool/date.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tool/date.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +78,10 @@
       <workItem from="1680252607284" duration="5144000" />
       <workItem from="1680259668487" duration="30000" />
       <workItem from="1680458845234" duration="8580000" />
-      <workItem from="1680509416401" duration="714000" />
+      <workItem from="1680509416401" duration="3547000" />
+      <workItem from="1680530250924" duration="10637000" />
+      <workItem from="1680598218182" duration="11015000" />
+      <workItem from="1680612823767" duration="2569000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680253103091</created>
@@ -113,7 +111,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680466016551</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="init">
+      <created>1680510251860</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680510251860</updated>
+    </task>
+    <task id="LOCAL-00006" summary="init">
+      <created>1680510420538</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680510420538</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
