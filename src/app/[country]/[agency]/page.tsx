@@ -58,21 +58,17 @@ export default async function Home(a: any) {
             }
         },
         {
-            $sort: { 'data.title.en': 1 }
-        },
-        {
             $skip: startIndex
         },
         {
             $limit: limit
-        }
+        },
     ]).toArray();
 
 
 
     const totalResults = await connect.count({
         'data.catalog.publisher.name_url': removeApiSuffix(a.params.agency),
-        'data.title.en': { $ne: null }
     })
 
     const totalPages = Math.ceil(totalResults / limit)
@@ -87,7 +83,7 @@ export default async function Home(a: any) {
     for (let i = 1; i <= totalPages; i++) {
         pages.push(
             <li key={i} >
-                <Link href={`${a.params.country}/${a.params.agency}?page=${i}`}>
+                <Link href={`/${a.params.country}/${a.params.agency}?page=${i}`}>
                     {i}
                 </Link>
             </li>

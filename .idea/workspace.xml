@@ -2,43 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7aaa7ee7-f29d-44b5-9cf9-58fb887287a2" name="Default Changelist" comment="init">
-      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap-index.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap18.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap23.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap26.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap27.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/baseLayout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[country]/[agency]/[dataset]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[country]/[agency]/[dataset]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[country]/[agency]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[country]/[agency]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[country]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[country]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/db/connect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/db/connect.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/pagination.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +77,7 @@
       <workItem from="1680636278154" duration="2511000" />
       <workItem from="1680646934469" duration="142000" />
       <workItem from="1680647192904" duration="984000" />
-      <workItem from="1680672929388" duration="1333000" />
+      <workItem from="1680672929388" duration="2607000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680253103091</created>
@@ -176,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680621324011</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="init">
+      <created>1680674309551</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680674309551</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

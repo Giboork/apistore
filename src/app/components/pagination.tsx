@@ -14,7 +14,7 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, basePa
             <ul className="flex flex-wrap">
                 {pageNumbers.map((pageNumber) => (
                     <li key={pageNumber} className="mx-1 my-1 sm:my-0">
-                        <Link href={`${basePath}?page=${pageNumber}`} passHref>
+                        <Link href={`/${basePath}?page=${pageNumber}`} passHref>
                             <button
                                 className={`${
                                     pageNumber === currentPage
