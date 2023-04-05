@@ -12,39 +12,58 @@ import Benefits from "./components/benefits";
 import Testimonials from "./components/testimonials";
 import userTwoImg from "../../public/img/flags/eu.svg";
 import Container from "./components/container";
+import type { GetStaticProps } from 'next';
+import type { Metadata } from 'next';
 
 const inter = Inter({ subsets: ['latin'] })
+
+
+
+
+export async function generateMetadata(): Promise<Metadata> {
+    return { title: 'API Store - Open European Data API',
+
+    description: 'Explore and preview European Open Data APIs at API.store. Our comprehensive API marketplace offers a variety of APIs to help developers build their applications quickly and easily.'
+    }
+}
+
 
 export default async function Home() {
     const connect = await getDatasetCollection()
 
-   const  aa = await connect.aggregate([
-       {
-           $match: {
-               'data.country.label': { $ne: null }
-           }
-       },
+    const aa = await connect.aggregate([
+        {
+            $match: {
+                'data.country.label': { $ne: null }
+            }
+        },
         {
             $group: {
                 _id: '$data.country.label',
                 data: { $first: '$data' }
             }
         },
-       {
-           $project: {
-               'data.country.label': 1,
-               'data.country.label_url': 1,
-               _id: 0
-           }
-       },
-       {
-           $sort: { 'data.country.label': 1 }
-       }
+        {
+            $project: {
+                'data.country.label': 1,
+                'data.country.label_url': 1,
+                _id: 0
+            }
+        },
+        {
+            $sort: { 'data.country.label': 1 }
+        }
     ], ).toArray();
-
-
   return (
 <div>
+
+    <Head>
+        <title>My Page Title</title>
+        <meta name="description" content="My Page Description" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {/* Další head tagy */}
+    </Head>
+
       <Hero />
 
     <SectionTitle

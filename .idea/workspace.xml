@@ -2,21 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7aaa7ee7-f29d-44b5-9cf9-58fb887287a2" name="Default Changelist" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/app/components/navigationBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap-index.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap14.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemaps/sitemap9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/baseLayout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[country]/[agency]/[dataset]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[country]/[agency]/[dataset]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[country]/[agency]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[country]/[agency]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[country]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[country]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/access.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/access.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/container.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/technology.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/technology.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/testimonials.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/testimonials.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/modules/db/connect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/db/connect.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/tool/date.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tool/date.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +69,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/sitemaps" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -60,6 +82,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/sitemaps" />
+      <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/src/app/components" />
       <recent name="$PROJECT_DIR$/src/app/tool" />
     </key>
@@ -81,7 +105,13 @@
       <workItem from="1680509416401" duration="3547000" />
       <workItem from="1680530250924" duration="10637000" />
       <workItem from="1680598218182" duration="11015000" />
-      <workItem from="1680612823767" duration="2569000" />
+      <workItem from="1680612823767" duration="4920000" />
+      <workItem from="1680618885624" duration="5786000" />
+      <workItem from="1680632107657" duration="662000" />
+      <workItem from="1680636278154" duration="2511000" />
+      <workItem from="1680646934469" duration="142000" />
+      <workItem from="1680647192904" duration="984000" />
+      <workItem from="1680672929388" duration="1333000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680253103091</created>
@@ -125,7 +155,28 @@
       <option name="project" value="LOCAL" />
       <updated>1680510420538</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="init">
+      <created>1680616141424</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680616141424</updated>
+    </task>
+    <task id="LOCAL-00008" summary="init">
+      <created>1680616181074</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680616181074</updated>
+    </task>
+    <task id="LOCAL-00009" summary="init">
+      <created>1680621324011</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680621324011</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

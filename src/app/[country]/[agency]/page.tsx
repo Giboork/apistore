@@ -12,8 +12,27 @@ import AccessBlock from "../../components/access";
 import Technology from "../../components/technology";
 import { mainLanguageText } from '@/app/tool/translate';
 import NavigationBar from "../../components/navigationBar";
+import { Metadata } from 'next/types';
 
 const inter = Inter({ subsets: ['latin'] })
+
+export async function generateMetadata(a: any): Promise<Metadata> {
+    const connect = await getDatasetCollection()
+    const aa = await connect.findOne({
+        'data.catalog.publisher.name_url':  removeApiSuffix(a.params.agency)
+    })
+
+    if(!aa) {
+        return {}
+    }
+
+    return { title: `${aa.data.catalog?.publisher?.name} API - ${aa.data?.country?.label} - Open Data API | API Store`,
+
+        description: 'Explore and preview European Open Data APIs at API.store. Our comprehensive API marketplace offers a variety of APIs to help developers build their applications quickly and easily.'
+    }
+}
+
+
 
 export default async function Home(a: any) {
 

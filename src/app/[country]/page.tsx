@@ -13,8 +13,27 @@ import NavigationBar from "../components/navigationBar";
 import {truncateText} from "../tool/string";
 import Technology from "../components/technology";
 import { mainLanguageText } from '../tool/translate';
+import { Metadata } from 'next';
 
 const inter = Inter({ subsets: ['latin'] })
+
+
+export async function generateMetadata(a: any): Promise<Metadata> {
+    const connect = await getDatasetCollection()
+    const aa = await connect.findOne({
+        'data.country.label_url':  removeApiSuffix(a.params.country)
+    })
+
+    if(!aa) {
+        return {}
+    }
+
+    return { title: ` ${aa.data.country.label} - Open Data API | API Store`,
+
+        description: 'Explore and preview European Open Data APIs at API.store. Our comprehensive API marketplace offers a variety of APIs to help developers build their applications quickly and easily.'
+    }
+}
+
 
 export default async function Home(a: any) {
     const connect = await getDatasetCollection()

@@ -7,6 +7,27 @@ import Technology from "../../../components/technology";
 import { mainLanguageText } from "@/app/tool/translate";
 import NavigationBar from "../../../components/navigationBar";
 import { formatISODate } from "@/app/tool/date";
+import { Metadata } from "next/types";
+
+export async function generateMetadata(a: any): Promise<Metadata> {
+    const connect = await getDatasetCollection()
+    const aa = await connect.findOne({
+        'data.title.en_url':  removeApiSuffix(a.params.dataset)
+    })
+
+
+    if(!aa) {
+        return {}
+    }
+
+    const title = mainLanguageText(aa.data.title)
+
+    return { title: `${aa.data.catalog?.publisher?.name} API - ${aa.data?.country?.label} - Open Data API | API Store`,
+
+        description: 'Explore and preview European Open Data APIs at API.store. Our comprehensive API marketplace offers a variety of APIs to help developers build their applications quickly and easily.'
+    }
+}
+
 
 export default async function Home(a: any) {
     const connect = await getDatasetCollection()
