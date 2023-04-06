@@ -24,8 +24,9 @@ export default async function Home(a: any) {
 
     return (
         <div>
-      dsadsa
-
+            <Container className="p-0 pb-5"  p={0}>
+               text text
+            </Container>
         </div>
     )
 }

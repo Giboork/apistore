@@ -90,7 +90,6 @@ export default async function Home(a: any) {
         );
     }
 
-
     const links = [
         ['/', 'Home'],
         [ `/${addApiSuffix(firstData.country.label_url)}`, `${firstData.country.label} Data APIs`],
