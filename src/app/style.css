@@ -12,3 +12,26 @@
 .faq-answer {
     display: none;
 }
+
+/* Hide the menu by default */
+#menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+/* Show the menu when the target of the link is the menu */
+#menu:target {
+    display: block;
+}
+
+/* Style the links in the menu */
+#menu li {
+    display: block;
+}
+
+/* Add a dark background color to the menu when it's open */
+#menu:target ~ .nav__item {
+    background-color: rgba(0,0,0,0.4);
+}

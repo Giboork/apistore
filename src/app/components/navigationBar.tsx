@@ -1,18 +1,15 @@
-import Link from 'next/link'
-
-
+import Link from 'next/link';
 
 interface Props {
     links: any[];
 }
 
-
 export default function NavigationBar(props: Props) {
     const { links } = props;
     return (
         <div className="bg-white flex items-center flex-wrap border-t border-gray-100">
-            <ul className="flex items-center mt-2">
-                <li className="hidden md:inline-flex items-center mr-2">
+            <ul className={`flex items-center mt-2 ${'md:pl-0 pl-8'}`}>
+                <li className="inline-flex items-center mr-2">
                     <a href="/" className="text-gray-800 hover:text-blue-500">
                         <svg
                             className="w-5 h-auto fill-current mx-2 text-gray-800"
@@ -26,13 +23,13 @@ export default function NavigationBar(props: Props) {
                     </a>
                 </li>
                 {links.map(([link, title], index) => (
-                    <li className="inline-flex items-center" key={index}>
+                    <li className={`inline-flex items-center ${index === links.length - 2 ? 'md:inline-flex' : 'hidden md:inline-flex'}`} key={index}>
                         <Link href={link} className={` ${index === links.length - 1 ? 'text-blue-500' : 'hover:text-blue-500'}`}>
                             {title}
                         </Link>
                         {index !== links.length - 1 && (
                             <svg
-                                className="w-5 h-auto fill-current mx-2 text-gray-400"
+                                className={`w-5 h-auto fill-current mx-2 text-gray-400 ${index === links.length - 2 ? 'hidden md:inline-flex' : ''}`}
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24"
                             >

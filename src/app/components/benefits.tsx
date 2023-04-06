@@ -44,13 +44,11 @@ export default function Benefits(props: any) {
                             width="640"
                             height="420"
                             alt="Benefits"
-                            layout="intrinsic"
+                            layout="responsive"
                             placeholder="blur"
                         />
                     </div>
                 </div>
-
-
 
                 <div
                     className="flex flex-wrap items-center w-full lg:w-1/2 right">

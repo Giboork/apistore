@@ -26,25 +26,26 @@ const TestimonialBase: FC<TestimonialCardProps> = ({
                                                        publisherUrl,
                                                        itemUrl,
                                                    }) => (
-        <Link href={`${itemUrl}`}>
-            <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-                <p className="text-2xl leading-normal">
-                    {title || "text"}
-                        <mark className="text-blue-800 bg-blue-100 rounded-md ring-blue-100 ring-4 dark:ring-blue-900 dark:bg-blue-900 dark:text-blue-200">
-                            Open Data
-                        </mark>
-                </p>
-                <p className="leading-normal ">{publisher}</p>
-
-                <p className="leading-normal ">Issued on {modified}</p>
-
-                <div className="flex items-center mt-8 space-x-3">
-                    <div>
-                        <div className="text-lg font-medium">{title}</div>
-                    </div>
+    <Link href={`${itemUrl}`}>
+        <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
+            <p className="text-2xl leading-normal break-all">
+                <span>{title || "text"} </span>
+                <span>
+                <mark className="text-blue-800 bg-blue-100 rounded-md ring-blue-100 ring-4 dark:ring-blue-900 dark:bg-blue-900 dark:text-blue-200 whitespace-nowrap">
+                    Open Data
+                </mark>
+            </span>
+            </p>
+            <p className="leading-normal break-all">{publisher}</p>
+            <p className="leading-normal break-all">Issued on {modified}</p>
+            <div className="flex items-center mt-8 space-x-3">
+                <div>
+                    <div className="text-lg font-medium break-all">{title}</div>
                 </div>
             </div>
-        </Link>
-    );
+        </div>
+    </Link>
+
+);
 
 export default TestimonialBase

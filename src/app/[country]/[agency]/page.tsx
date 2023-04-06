@@ -94,7 +94,7 @@ export default async function Home(a: any) {
     const links = [
         ['/', 'Home'],
         [ `/${addApiSuffix(firstData.country.label_url)}`, `${firstData.country.label} Data APIs`],
-        [ ``, `${firstData.catalog.publisher.name}`],
+        [ ``, `${truncateText(firstData.catalog.publisher.name)}`],
     ];
 
 
@@ -152,16 +152,17 @@ export default async function Home(a: any) {
                             <p>Array is empty</p>
                         )}
                 </Container>
-
+                <Container className="p-0 pb-5"  p={0}>
                 <Pagination
                     currentPage={page}
                     totalPages={totalPages}
                     basePath={`${a.params.country}/${a.params.agency}`}
                 />
-
+                </Container>
                 <div className="pt-80">
                     <Technology />
                 </div>
+
             </div>
 
 

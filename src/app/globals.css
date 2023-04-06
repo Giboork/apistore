@@ -5,3 +5,9 @@
 img {
     max-width: none !important;
 }
+
+
+@font-face {
+    font-family: "Custom-1";
+    src: url("/font/NewTegomin-Regular.ttf");
+}

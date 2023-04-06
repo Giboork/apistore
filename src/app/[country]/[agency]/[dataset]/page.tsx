@@ -8,6 +8,7 @@ import { mainLanguageText } from "@/app/tool/translate";
 import NavigationBar from "../../../components/navigationBar";
 import { formatISODate } from "@/app/tool/date";
 import { Metadata } from "next/types";
+import { truncateText } from "@/app/tool/string";
 
 export async function generateMetadata(a: any): Promise<Metadata> {
     const connect = await getDatasetCollection()
@@ -40,12 +41,12 @@ export default async function Home(a: any) {
     const firstData = country.data
 
     const urlCountry = `/${addApiSuffix(firstData.country.label_url)}`
-
+    const title = mainLanguageText(country.data?.title)
     const links = [
         ['/', 'Home'],
         [ `/${addApiSuffix(firstData.country.label_url)}`, `${firstData.country.label} Data APIs`],
         [ urlCountry, `${firstData.catalog.publisher.name}`],
-        [ ``, `${mainLanguageText(country.data.catalog?.title)}`],
+        [ ``, `${truncateText(title, 100)}`],
     ];
 
 
@@ -58,7 +59,7 @@ export default async function Home(a: any) {
         return labels;
     }
 
-    const title = mainLanguageText(country.data?.title)
+
 
 
     const urlCatalog = `https://data.europa.eu/data/datasets?catalog=${country.data.catalog?.id}&showcatalogdetails=true&locale=en`

@@ -32,11 +32,11 @@ export default function Hero(props: any) {
                     <div className="">
                         <Image
                             src="/img/hero.svg"
+                            alt="API in building Illustration"
+                            layout="responsive"
+                            loading="eager"
                             width="616"
                             height="617"
-                            alt="API in building Illustration"
-                            layout="intrinsic"
-                            loading="eager"
                         />
                     </div>
                 </div>

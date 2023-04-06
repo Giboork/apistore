@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7aaa7ee7-f29d-44b5-9cf9-58fb887287a2" name="Default Changelist" comment="init">
+      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/about-us/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/navbarClient.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[country]/[agency]/[dataset]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[country]/[agency]/[dataset]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[country]/[agency]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[country]/[agency]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/pagination.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[country]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[country]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/benefits.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/benefits.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/navigationBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/navigationBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/testimonialsBase.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/testimonialsBase.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +49,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/sitemaps" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/about-us" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -48,10 +62,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/about-us" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/app/components" />
       <recent name="$PROJECT_DIR$/public/sitemaps" />
       <recent name="$PROJECT_DIR$/src/app" />
-      <recent name="$PROJECT_DIR$/src/app/components" />
-      <recent name="$PROJECT_DIR$/src/app/tool" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -77,7 +92,8 @@
       <workItem from="1680636278154" duration="2511000" />
       <workItem from="1680646934469" duration="142000" />
       <workItem from="1680647192904" duration="984000" />
-      <workItem from="1680672929388" duration="2607000" />
+      <workItem from="1680672929388" duration="5345000" />
+      <workItem from="1680784096834" duration="18698000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680253103091</created>
@@ -149,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680674309551</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="init">
+      <created>1680675633762</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1680675633762</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

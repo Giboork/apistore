@@ -15,7 +15,7 @@ import Container from "./components/container";
 import type { GetStaticProps } from 'next';
 import type { Metadata } from 'next';
 
-const inter = Inter({ subsets: ['latin'] })
+
 
 
 
@@ -45,8 +45,7 @@ export default async function Home() {
         },
         {
             $project: {
-                'data.country.label': 1,
-                'data.country.label_url': 1,
+                'data.country': 1,
                 _id: 0
             }
         },
@@ -54,6 +53,9 @@ export default async function Home() {
             $sort: { 'data.country.label': 1 }
         }
     ], ).toArray();
+
+    console.log(aa[0].data)
+
   return (
 <div>
 
@@ -92,7 +94,7 @@ export default async function Home() {
                                 </p>
 
                                 <Avatar
-                                    image={userTwoImg}
+                                    image={`img/flags/${item?.data?.country?.id}.svg`}
                                     name={item?.data?.country?.label}
                                 />
                             </div>

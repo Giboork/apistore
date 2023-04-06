@@ -1,3 +1,4 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   purge: [ "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -7,7 +8,12 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",],
   darkMode: false,
   theme: {
-    extend: {},
+    extend: {
+
+    },
+    fontFamily: {
+      "Josefin": ["Josefin Sans", ...defaultTheme.fontFamily.sans],
+    },
   },
   variants: {
     extend: {},
