@@ -126,7 +126,7 @@ function Avatar(props: any) {
                 />
             </div>
             <div>
-                <div className="text-lg font-medium">{props.name}</div>
+                <div className="text-lg font-medium underline">{props.name} Agencies &gt;</div>
             </div>
         </div>
     );

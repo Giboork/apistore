@@ -98,7 +98,7 @@ export default function Footer() {
                 <div
                     className="flex flex-wrap items-center justify-between w-full max-w-4xl gap-5 mx-auto text-white bg-blue-600 px-7 py-7 lg:px-12 lg:py-12 lg:flex-nowrap rounded-xl">
                     <div className="flex-grow text-center lg:text-left"><h2
-                        className="text-2xl font-medium lg:text-3xl">Didnt find the API you need?</h2><p
+                        className="text-2xl font-medium lg:text-3xl">Didn't find the API you need?</h2><p
                         className="mt-2 font-medium text-white text-opacity-90 lg:text-xl">Let us know and we will
                         figure it out for you.</p></div>
                     <div className="flex-shrink-0 w-full text-center lg:w-auto"><a href="#" target="_blank"
@@ -152,24 +152,7 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div>
-                        <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
-                            {navigation.map((item, index) => (
-                                    <a key={index} className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-blue-500 focus:text-blue-500 focus:bg-blue-100 focus:outline-none dark:focus:bg-trueGray-700">
-                                        {item}
-                                    </a>
-                            ))}
-                        </div>
-                    </div>
-                    <div>
-                        <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
-                            {legal.map((item, index) => (
-                                    <a key={index} className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-blue-500 focus:text-blue-500 focus:bg-blue-100 focus:outline-none dark:focus:bg-trueGray-700">
-                                        {item}
-                                    </a>
-                            ))}
-                        </div>
-                    </div>
+          
 
                 </div>
 

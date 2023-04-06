@@ -45,19 +45,17 @@ export default function NavbarClient() {
                 </label>
                 {mobileMenuOpen &&
                 <div className="flex flex-wrap w-full my-5 lg:hidden" id="headlessui-disclosure-panel-2">
-                    <a className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-blue-500 focus:text-blue-500 focus:bg-blue-100 dark:focus:bg-gray-800 focus:outline-none dark:focus:bg-trueGray-700" href="/">Datasets</a>
-                    <a className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-blue-500 focus:text-blue-500 focus:bg-blue-100 dark:focus:bg-gray-800 focus:outline-none dark:focus:bg-trueGray-700" href="/">FAQs</a>
-                    <a className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-blue-500 focus:text-blue-500 focus:bg-blue-100 dark:focus:bg-gray-800 focus:outline-none dark:focus:bg-trueGray-700" href="/">About Us</a>
-                    <a className="w-full px-6 py-2 mt-3 text-center text-white bg-blue-600 rounded-md lg:ml-5" href="/">Get Started</a>
+                    <a className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-blue-500 focus:text-blue-500 focus:bg-blue-100 dark:focus:bg-gray-800 focus:outline-none dark:focus:bg-trueGray-700"  target="_blank" href="https://apitalks.freshstatus.io/">API Avalibility</a>
+                    <a className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-blue-500 focus:text-blue-500 focus:bg-blue-100 dark:focus:bg-gray-800 focus:outline-none dark:focus:bg-trueGray-700"  href="/about-us">About Us</a>
+                    <a className="w-full px-6 py-2 mt-3 text-center text-white bg-blue-600 rounded-md lg:ml-5" id="contact-us-phone" >Contact us</a>
                 </div>
                 }
             </div>
 
             <div className="hidden text-center lg:flex lg:items-center">
                 <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
-                    <li className="mr-3 nav__item"><a className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-blue-500 focus:text-blue-500 focus:bg-blue-100 focus:outline-none dark:focus:bg-gray-800" href="/">Datasets</a></li>
-                    <li className="mr-3 nav__item"><a className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-blue-500 focus:text-blue-500 focus:bg-blue-100 focus:outline-none dark:focus:bg-gray-800" href="/">FAQs</a></li>
-                    <li className="mr-3 nav__item"><a className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-blue-500 focus:text-blue-500 focus:bg-blue-100 focus:outline-none dark:focus:bg-gray-800" href="/">About Us</a></li>
+                    <li className="mr-3 nav__item"><a className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-blue-500 focus:text-blue-500 focus:bg-blue-100 focus:outline-none dark:focus:bg-gray-800" target="_blank" href="https://apitalks.freshstatus.io/" >API Avalibility</a></li>
+                    <li className="mr-3 nav__item"><a className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-blue-500 focus:text-blue-500 focus:bg-blue-100 focus:outline-none dark:focus:bg-gray-800" href="/about-us">About U</a></li>
                 </ul>
             </div>
             <div className="hidden mr-3 space-x-4 lg:flex nav__item">

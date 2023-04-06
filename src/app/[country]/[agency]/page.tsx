@@ -104,12 +104,12 @@ export default async function Home(a: any) {
                 <NavigationBar links={links} />
             </Container>
 
-
+asdsad
             <div>
                 <Container>
                     <div className=" text-center items-center justify-center text-center">
                     <h1 className=" text-center text-4xl font-bolclassNameding-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
-                        <span className="text-blue-500">{firstData.catalog.publisher.name} </span> Open data API in a single place</h1>
+                        <span className="text-blue-500">{firstData.catalog.publisher.name} </span> Open data in a single API request</h1>
 
                     <div className="pb-10 items-center justify-center text-center leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300  ">
                         <div className="max-w-3xl mx-auto text-center">
@@ -139,7 +139,7 @@ export default async function Home(a: any) {
                                     <TestimonialBase
                                         key={index}
                                         modified={formatISODate(item.data.catalog.modified || "")}
-                                        title={mainLanguageText(item.data?.title)}
+                                        title={truncateText(mainLanguageText(item.data?.title))}
                                         publisher={truncateText(mainLanguageText(item.data?.description))}
                                         publisherUrl={addApiSuffix(
                                             item.data.catalog.publisher.name_url || ""
@@ -159,7 +159,7 @@ export default async function Home(a: any) {
                     basePath={`${a.params.country}/${a.params.agency}`}
                 />
                 </Container>
-                <div className="pt-80">
+                <div className="pt-[100px]">
                     <Technology />
                 </div>
 

@@ -12,7 +12,7 @@ export default function AccessBlock(props: Props) {
         <div
             className="flex flex-wrap items-center justify-between w-full max-w-4xl gap-5 mx-auto text-white bg-blue-600 px-7 py-7 lg:px-12 lg:py-12 lg:flex-nowrap rounded-xl">
             <div className="flex-grow text-center lg:text-left">
-                <h2 className="text-2xl font-medium lg:text-3xl">Get early access to {agencyName} <br/> API!</h2>
+                <h2 className="text-2xl font-medium lg:text-3xl">Get early access to {agencyName} API!</h2>
 
                 <p className="mt-2 font-medium text-white text-opacity-90 lg:text-xl">Let us
                 know and we will figure it out for you.</p>

@@ -40,15 +40,15 @@ export default async function Home(a: any) {
 
     const firstData = country.data
 
-    const urlCountry = `/${addApiSuffix(firstData.country.label_url)}`
+    const urlCountry = `${addApiSuffix(firstData.country.label_url)}`
+    const urlCategory = `/${urlCountry}/${firstData.catalog.publisher.name_url}`
     const title = mainLanguageText(country.data?.title)
     const links = [
         ['/', 'Home'],
-        [ `/${addApiSuffix(firstData.country.label_url)}`, `${firstData.country.label} Data APIs`],
-        [ urlCountry, `${firstData.catalog.publisher.name}`],
+        [ `/${urlCountry}`, `${firstData.country.label} Data APIs`],
+        [ urlCategory, `${firstData.catalog.publisher.name}`],
         [ ``, `${truncateText(title, 100)}`],
     ];
-
 
 
     function getLanguageLabels(langArray: any) {
@@ -59,10 +59,6 @@ export default async function Home(a: any) {
         return labels;
     }
 
-
-
-
-    const urlCatalog = `https://data.europa.eu/data/datasets?catalog=${country.data.catalog?.id}&showcatalogdetails=true&locale=en`
 
   return (
       <div>
@@ -93,7 +89,7 @@ export default async function Home(a: any) {
                   <div className="flex flex-wrap">
                       <div className="w-full md:w-[200px] mb-4 md:mb-0 font-bold">Catalog</div>
                       <div className="w-full md:w-auto md:flex-1 pl-4">
-                    <a href={urlCatalog} target="_blank" className="underline text-black" >
+                    <a href={urlCategory} target="_blank" className="underline text-black" >
                           {mainLanguageText(country.data.catalog?.title)}
                     </a>
                       </div>
@@ -144,7 +140,7 @@ export default async function Home(a: any) {
                 {mainLanguageText(country.data.description)}
               </div>
 
-              <div className="pt-80">
+              <div className="pt-[100px]">
                   <Technology />
               </div>
           </div>
