@@ -101,8 +101,9 @@ export default function Footer() {
                         className="text-2xl font-medium lg:text-3xl">Didn't find the API you need?</h2><p
                         className="mt-2 font-medium text-white text-opacity-90 lg:text-xl">Let us know and we will
                         figure it out for you.</p></div>
-                    <div className="flex-shrink-0 w-full text-center lg:w-auto"><a href="#" target="_blank"
+                    <div className="flex-shrink-0 w-full text-center lg:w-auto"><a target="_blank"
                                                                                    rel="noopener"
+                                                                                   id="contact-us-footer"
                                                                                    className="inline-block py-3 mx-auto text-lg font-medium text-center text-blue-600 bg-white rounded-md px-7 lg:px-10 lg:py-5 ">Contact
                         us</a></div>
                 </div>
@@ -152,7 +153,7 @@ export default function Footer() {
                         </div>
                     </div>
 
-          
+
 
                 </div>
 

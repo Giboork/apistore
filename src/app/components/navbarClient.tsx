@@ -59,7 +59,7 @@ export default function NavbarClient() {
                 </ul>
             </div>
             <div className="hidden mr-3 space-x-4 lg:flex nav__item">
-                <a className="px-6 py-2 text-white bg-blue-600 rounded-md md:ml-5" href="/">Contact us</a>
+                <a className="px-6 py-2 text-white bg-blue-600 rounded-md md:ml-5">Contact us</a>
             </div>
         </nav>
     );

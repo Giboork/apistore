@@ -103,8 +103,6 @@ export default async function Home(a: any) {
             <Container className="p-0 pb-5"  p={0}>
                 <NavigationBar links={links} />
             </Container>
-
-asdsad
             <div>
                 <Container>
                     <div className=" text-center items-center justify-center text-center">
