@@ -98,7 +98,7 @@ export default function Footer() {
                 <div
                     className="flex flex-wrap items-center justify-between w-full max-w-4xl gap-5 mx-auto text-white bg-blue-600 px-7 py-7 lg:px-12 lg:py-12 lg:flex-nowrap rounded-xl">
                     <div className="flex-grow text-center lg:text-left"><h2
-                        className="text-2xl font-medium lg:text-3xl">Didn't find the API you need?</h2><p
+                        className="text-2xl font-medium lg:text-3xl">Didn&apos;t find the API you need?</h2><p
                         className="mt-2 font-medium text-white text-opacity-90 lg:text-xl">Let us know and we will
                         figure it out for you.</p></div>
                     <div className="flex-shrink-0 w-full text-center lg:w-auto"><a target="_blank"
