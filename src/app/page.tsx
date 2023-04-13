@@ -26,7 +26,6 @@ export async function generateMetadata(): Promise<Metadata> {
         openGraph: {
             title: 'Acmaaaaaaaaae',
             description: 'Acme is a...',
-            url: 'aaaAcme is a...',
         },
     }
 }

@@ -9,12 +9,20 @@ interface PaginationProps {
 const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, basePath }) => {
     const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
 
+
+
+    const  url = (pageNumber: number) => {
+        const prefx = pageNumber === 1 ? '' : `?page=${pageNumber}`
+
+       return `/${basePath}${prefx}`
+    }
+
     return (
         <nav className="flex justify-center mt-4">
             <ul className="flex flex-wrap">
                 {pageNumbers.map((pageNumber) => (
                     <li key={pageNumber} className="mx-1 my-1 sm:my-0">
-                        <Link href={`/${basePath}?page=${pageNumber}`} passHref>
+                        <Link href={url(pageNumber)} passHref>
                             <button
                                 className={`${
                                     pageNumber === currentPage

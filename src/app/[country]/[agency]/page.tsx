@@ -26,8 +26,8 @@ export async function generateMetadata(a: any): Promise<Metadata> {
         return {}
     }
 
-    return { title: `${aa.data.catalog?.publisher?.name} API - ${aa.data?.country?.label} - Open Data API | API Store`,
-
+    return {
+        title: `${aa.data.catalog?.publisher?.name} API - ${aa.data?.country?.label} - Open Data API | API Store`,
         description: 'Explore and preview European Open Data APIs at API.store. Our comprehensive API marketplace offers a variety of APIs to help developers build their applications quickly and easily.'
     }
 }
@@ -79,18 +79,6 @@ export default async function Home(a: any) {
     }
 
     const firstData = country[0].data
-
-    const pages = [];
-    for (let i = 1; i <= totalPages; i++) {
-        pages.push(
-            <li key={i}>
-                <Link href={`/${a.params.country}/${a.params.agency}${i === 1 ? '' : `?page=${i}`}`}>
-                    {i !== 1 ? i : ''}
-                </Link>
-            </li>
-
-        );
-    }
 
     const links = [
         ['/', 'Home'],
