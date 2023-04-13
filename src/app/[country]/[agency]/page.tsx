@@ -83,11 +83,12 @@ export default async function Home(a: any) {
     const pages = [];
     for (let i = 1; i <= totalPages; i++) {
         pages.push(
-            <li key={i} >
-                <Link href={`/${a.params.country}/${a.params.agency}?page=${i}`}>
-                    {i}
+            <li key={i}>
+                <Link href={`/${a.params.country}/${a.params.agency}${i === 1 ? '' : `?page=${i}`}`}>
+                    {i !== 1 ? i : ''}
                 </Link>
             </li>
+
         );
     }
 

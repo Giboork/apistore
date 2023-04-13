@@ -1,6 +1,4 @@
 export function formatISODate(isoDate: string, includeTime?: boolean): string {
-
-    console.log(isoDate, 'isoDateisoDate')
     if(!isoDate) {
         return ''
     }

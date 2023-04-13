@@ -12,6 +12,7 @@ import {truncateText} from "../tool/string";
 import Technology from "../components/technology";
 import { mainLanguageText } from '../tool/translate';
 import { Metadata } from 'next';
+import { errorLog } from '../modules/db/erroLog';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -51,6 +52,7 @@ export default async function Home(a: any) {
     ]).toArray();
 
     if(aa.length === 0) {
+        await errorLog(404, 'url---123')
         notFound()
     }
 

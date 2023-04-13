@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import { MongoClient } from 'mongodb';
-import Head from 'next/head'
 import Link from 'next/link';
 import styles from './page.module.css'
 import {getDatasetCollection} from "./modules/db/connect";
@@ -23,7 +22,12 @@ import type { Metadata } from 'next';
 export async function generateMetadata(): Promise<Metadata> {
     return { title: 'API Store - Open European Data API',
 
-    description: 'Explore and preview European Open Data APIs at API.store. Our comprehensive API marketplace offers a variety of APIs to help developers build their applications quickly and easily.'
+    description: 'Explore and preview European Open Data APIs at API.store. Our comprehensive API marketplace offers a variety of APIs to help developers build their applications quickly and easily.',
+        openGraph: {
+            title: 'Acmaaaaaaaaae',
+            description: 'Acme is a...',
+            url: 'aaaAcme is a...',
+        },
     }
 }
 
@@ -58,13 +62,6 @@ export default async function Home() {
 
   return (
 <div>
-
-    <Head>
-        <title>My Page Title</title>
-        <meta name="description" content="My Page Description" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* Další head tagy */}
-    </Head>
 
       <Hero />
 

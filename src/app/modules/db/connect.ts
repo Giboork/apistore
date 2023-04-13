@@ -23,7 +23,7 @@ interface Dataset {
 let client: MongoClient;
 export let datasetCollection: Collection<Dataset>;
 
-const mongoConnect = async (): Promise<MongoClient> => {
+export const mongoConnect = async (): Promise<MongoClient> => {
     if (!client) {
         // const uri = 'mongodb://localhost'
         const uri = 'mongodb+srv://apistore:EbM8bK0E7kv2t1PE@cluster-apistore.twb1g.mongodb.net'
