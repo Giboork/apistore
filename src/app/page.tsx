@@ -13,21 +13,10 @@ import userTwoImg from "../../public/img/flags/eu.svg";
 import Container from "./components/container";
 import type { GetStaticProps } from 'next';
 import type { Metadata } from 'next';
-
-
-
-
-
+import { baseHead } from './modules/head';
 
 export async function generateMetadata(): Promise<Metadata> {
-    return { title: 'API Store - Open European Data API',
-
-    description: 'Explore and preview European Open Data APIs at API.store. Our comprehensive API marketplace offers a variety of APIs to help developers build their applications quickly and easily.',
-        openGraph: {
-            title: 'Acmaaaaaaaaae',
-            description: 'Acme is a...',
-        },
-    }
+    return   baseHead({})
 }
 
 

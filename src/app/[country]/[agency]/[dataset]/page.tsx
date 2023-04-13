@@ -9,6 +9,7 @@ import NavigationBar from "../../../components/navigationBar";
 import { formatISODate } from "@/app/tool/date";
 import { Metadata } from "next/types";
 import { truncateText } from "@/app/tool/string";
+import { baseHead } from "@/app/modules/head";
 
 export async function generateMetadata(a: any): Promise<Metadata> {
     const connect = await getDatasetCollection()
@@ -23,10 +24,10 @@ export async function generateMetadata(a: any): Promise<Metadata> {
 
     const title = mainLanguageText(aa.data.title)
 
-    return { title: `${aa.data.catalog?.publisher?.name} API - ${aa.data?.country?.label} - Open Data API | API Store`,
-
-        description: 'Explore and preview European Open Data APIs at API.store. Our comprehensive API marketplace offers a variety of APIs to help developers build their applications quickly and easily.'
-    }
+    return baseHead({
+        title: `${aa.data.catalog?.publisher?.name} API - ${aa.data?.country?.label} - Open Data API | API Store`,
+        fullPath: `/${a.params.country}/${a.params.agency}/${a.params.dataset}`
+    })
 }
 
 

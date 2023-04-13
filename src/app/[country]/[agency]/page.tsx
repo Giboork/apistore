@@ -13,6 +13,7 @@ import Technology from "../../components/technology";
 import { mainLanguageText } from '@/app/tool/translate';
 import NavigationBar from "../../components/navigationBar";
 import { Metadata } from 'next/types';
+import { baseHead } from '@/app/modules/head';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,10 +27,10 @@ export async function generateMetadata(a: any): Promise<Metadata> {
         return {}
     }
 
-    return {
-        title: `${aa.data.catalog?.publisher?.name} API - ${aa.data?.country?.label} - Open Data API | API Store`,
-        description: 'Explore and preview European Open Data APIs at API.store. Our comprehensive API marketplace offers a variety of APIs to help developers build their applications quickly and easily.'
-    }
+    return baseHead({
+        title: `${aa.data.country.label} - Open Data API | API Store`,
+        fullPath: `/${a.params.country}/${a.params.agency}`
+    })
 }
 
 
