@@ -43,12 +43,13 @@ export default async function Home(a: any) {
     const startIndex = (page - 1) * limit
     const country = await connect.aggregate([
         {
-            $match: { 'data.catalog.publisher.name_url': removeApiSuffix(a.params.agency) }
+            $match: { 'data.catalog.publisher.name_url': removeApiSuffix(a.params.agency),  'data.country.label_url': removeApiSuffix(a.params.country) }
         },
         {
             $project: {
                 'data.catalog.publisher.name_url': 1,
                 'data.catalog.publisher.name': 1,
+                'data.issued': 1,
                 'data.title': 1,
                 'data.description': 1,
                 'data.catalog.modified': 1,
@@ -118,12 +119,12 @@ export default async function Home(a: any) {
 
                     <div
                         className="container p-8 mx-classNamexl:px-0 flex w-full flex-col mt-4 items-center justify-center text-center">
-                        <div className="text-sm font-boldclassNameking-wider text-blue-600 uppercase">API Store Benefits</div>
+                        <div className="text-sm font-bold tracking-wider text-blue-600 uppercase">Available datasets</div>
                         <h2 className="max-w-2xl mt-3 teclassNamel font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">Open data Portal {firstData.country.label} Open Data API in development</h2>
 
                         <p
                         className="max-w-2xl py-4 teclassName leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">With
-                            List of APIs we currently working on to bridge to life. Are you missin <br/> any? Let us know!</p></div>
+                            List of APIs we currently working on to bridge to life.<br/> Are you missing any? Let us know!</p></div>
 
                     </div>
 
@@ -135,7 +136,7 @@ export default async function Home(a: any) {
                                 {country.map((item, index) => (
                                     <TestimonialBase
                                         key={index}
-                                        modified={formatISODate(item.data.catalog.modified || "")}
+                                        modified={(item.data.issued || "")}
                                         title={truncateText(mainLanguageText(item.data?.title))}
                                         publisher={truncateText(mainLanguageText(item.data?.description))}
                                         publisherUrl={addApiSuffix(
@@ -156,10 +157,11 @@ export default async function Home(a: any) {
                     basePath={`${a.params.country}/${a.params.agency}`}
                 />
                 </Container>
+                <Container className="p-0 pb-5"  p={0}>
                 <div className="pt-[100px]">
                     <Technology />
                 </div>
-
+                </Container>
             </div>
 
 

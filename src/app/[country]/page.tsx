@@ -7,8 +7,6 @@ import styles from './page.module.css'
 import {getDatasetCollection} from "../modules/db/connect";
 import {addApiSuffix, removeApiSuffix} from "../tool/url";
 import Container from "../components/container";
-import userTwoImg from "../../../public/img/flags/eu.svg";
-import TestimonialsBase from "../components/testimonialsBase";
 import NavigationBar from "../components/navigationBar";
 import {truncateText} from "../tool/string";
 import Technology from "../components/technology";
@@ -81,9 +79,9 @@ export default async function Home(a: any) {
 
                 <div
                     className="container p-6 px-0 flex w-full flex-col mt-4 items-center justify-center text-center">
-                    <div className="text-sm font-boldclassNameking-wider text-blue-600 uppercase">API Store Benefits</div>
-                    <h2 className="max-w-2xl mt-3 teclassNamel font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">{getFirstLabel()} Open data API in <br/>development</h2><p
-                    className="max-w-2xl py-4 teclassName leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">List of APIs we currently working on to bridge to life. Are you missin <br/> any? Let us know! </p></div>
+                    <div className="text-sm font-bold tracking-wider text-blue-600 uppercase">Available datasets</div>
+                    <h2 className="max-w-2xl mt-3 teclassNamel font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">{getFirstLabel()} Open data API in development</h2><p
+                    className="max-w-2xl py-4 teclassName leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">List of APIs we currently working on to bridge to life.<br/> Are you missing any? Let us know! </p></div>
 
                         {aa.length > 0 ? (
                             <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
@@ -98,8 +96,7 @@ export default async function Home(a: any) {
                                     Open Data
                                     </mark>
                                     </p>
-                                    <p className="leading-normal pt-2">{truncateText(mainLanguageText(item?.data?.catalog?.description || ''))}</p>
-                                    <p className="leading-normal pt-2">{item.data.catalog.publisher.name || ""} provided by</p>
+                                    <p className="leading-normal pt-2">{truncateText(mainLanguageText(item?.data?.catalog?.description || ''))} provided by {item.data.catalog.publisher.name || ""}</p>
 
                                         <div className="flex items-center mt-8 space-x-3">
                                             <div>

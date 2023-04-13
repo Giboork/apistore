@@ -1,4 +1,10 @@
 export function formatISODate(isoDate: string, includeTime?: boolean): string {
+
+    console.log(isoDate, 'isoDateisoDate')
+    if(!isoDate) {
+        return ''
+    }
+
     const date = new Date(isoDate);
     const year = date.getUTCFullYear();
     const month = String(date.getUTCMonth() + 1).padStart(2, "0");

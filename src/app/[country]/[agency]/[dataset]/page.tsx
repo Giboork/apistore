@@ -32,20 +32,22 @@ export async function generateMetadata(a: any): Promise<Metadata> {
 
 export default async function Home(a: any) {
     const connect = await getDatasetCollection()
-    const country = await connect.findOne({"data.title.en_url": removeApiSuffix(a.params.dataset) } ) as any ;
+    const country = await connect.findOne({"data.title.en_url": removeApiSuffix(a.params.dataset), 'data.catalog.publisher.name_url': removeApiSuffix(a.params.agency) } ) as any ;
 
     if(!country) {
         notFound()
     }
 
+
+
     const firstData = country.data
 
-    const urlCountry = `${addApiSuffix(firstData.country.label_url)}`
-    const urlCategory = `/${urlCountry}/${firstData.catalog.publisher.name_url}`
+    const urlCountry = `/${addApiSuffix(firstData.country.label_url)}`
+    const urlCategory = `${urlCountry}/${addApiSuffix(firstData.catalog.publisher.name_url)}`
     const title = mainLanguageText(country.data?.title)
     const links = [
         ['/', 'Home'],
-        [ `/${urlCountry}`, `${firstData.country.label} Data APIs`],
+        [ `${urlCountry}`, `${firstData.country.label} Data APIs`],
         [ urlCategory, `${firstData.catalog.publisher.name}`],
         [ ``, `${truncateText(title, 100)}`],
     ];
@@ -89,7 +91,7 @@ export default async function Home(a: any) {
                   <div className="flex flex-wrap">
                       <div className="w-full md:w-[200px] mb-4 md:mb-0 font-bold">Catalog</div>
                       <div className="w-full md:w-auto md:flex-1 pl-4">
-                    <a href={urlCategory} target="_blank" className="underline text-black" >
+                    <a href={urlCategory} className="underline text-black" >
                           {mainLanguageText(country.data.catalog?.title)}
                     </a>
                       </div>
@@ -104,11 +106,11 @@ export default async function Home(a: any) {
                   </div>
                   <div className="flex flex-wrap mt-4">
                       <div className="w-full md:w-[200px] mb-4 md:mb-0 font-bold">Updated</div>
-                      <div className="w-full md:w-auto md:flex-1 pl-4">{formatISODate(country.data.catalog.modified, true)}</div>
+                      <div className="w-full md:w-auto md:flex-1 pl-4">{formatISODate(country.data.modified, true)}</div>
                   </div>
                   <div className="flex flex-wrap mt-4">
                       <div className="w-full md:w-[200px] mb-4 md:mb-0 font-bold">Created</div>
-                      <div className="w-full md:w-auto md:flex-1 pl-4">{formatISODate(country.data.catalog.issued)}</div>
+                      <div className="w-full md:w-auto md:flex-1 pl-4">{formatISODate(country.data.issued)}</div>
                   </div>
                   <div className="flex flex-wrap mt-4">
                       <div className="w-full md:w-[200px] mb-4 md:mb-0 font-bold">Avaliable languages</div>
