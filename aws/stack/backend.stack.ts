@@ -10,7 +10,7 @@ export class BackendStack extends Stack {
 
         new QestEcsDeployment(this, 'deployment', {
             internetNetwork: {
-                lbPriority: 1,
+                lbPriority: 10,
                 subdomain: 'apistore',
             },
             containerSpecification: {

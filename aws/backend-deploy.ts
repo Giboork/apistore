@@ -7,4 +7,4 @@ const env = {
     account: process.env.CDK_DEFAULT_ACCOUNT,
 }
 
-new BackendStack(app, 'backend-stack', { env })
+new BackendStack(app, 'apistore-react-stack', { env })
