@@ -1,16 +1,25 @@
 import {Stack, StackProps} from "aws-cdk-lib";
 import {Construct} from "constructs";
-import {QestEcsDeployment} from "qest-ecs-cluster";
+import {constructs, QestEcsDeployment} from "qest-ecs-cluster";
 import {ContainerImage} from "aws-cdk-lib/aws-ecs";
 import * as path from "path";
+import {ApplicationTargetGroup, ListenerCondition} from "aws-cdk-lib/aws-elasticloadbalancingv2";
+
+export type BackendProps = StackProps & {
+    lbPriority: number,
+    httpDomains: Array<{
+        domain: string,
+        lbPriority: number
+    }>
+};
 
 export class BackendStack extends Stack {
-    constructor(scope: Construct, id: string, props: StackProps) {
+    constructor(scope: Construct, id: string, props: BackendProps) {
         super(scope, id, props);
 
-        new QestEcsDeployment(this, 'deployment', {
+        const deployment = new QestEcsDeployment(this, 'deployment', {
             internetNetwork: {
-                lbPriority: 10,
+                lbPriority: props.lbPriority,
                 subdomain: 'apistore',
             },
             containerSpecification: {
@@ -23,5 +32,16 @@ export class BackendStack extends Stack {
                 memoryReservationMiB: 320,
             }
         });
+
+        const httpListener = constructs.httpListener(this, 'http-listener');
+        for(const httpDomain of props.httpDomains) {
+            httpListener.addTargetGroups(`target-group-${httpDomain.lbPriority}`, {
+                targetGroups: [deployment.targetGroup as ApplicationTargetGroup],
+                priority: httpDomain.lbPriority,
+                conditions: [
+                    ListenerCondition.hostHeaders([httpDomain.domain])
+                ]
+            })
+        }
     }
 }

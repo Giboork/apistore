@@ -7,4 +7,16 @@ const env = {
     account: process.env.CDK_DEFAULT_ACCOUNT,
 }
 
-new BackendStack(app, 'apistore-react-stack', { env })
+new BackendStack(app, 'apistore-react-stack', {
+    env,
+    lbPriority: 10,
+    httpDomains: [
+        {
+            domain: 'api.store',
+            lbPriority: 10,
+        }, {
+            domain: 'test.api.store',
+            lbPriority: 11,
+        }
+    ]
+})
