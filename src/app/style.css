@@ -4,34 +4,34 @@
 
 .faq-btn:focus-within,
 .faq-btn.active {
-    background-color: #edf2f7;
+  background-color: #edf2f7;
 }
 .faq-answer.active {
-    display: block;
+  display: block;
 }
 .faq-answer {
-    display: none;
+  display: none;
 }
 
 /* Hide the menu by default */
 #menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
 
 /* Show the menu when the target of the link is the menu */
 #menu:target {
-    display: block;
+  display: block;
 }
 
 /* Style the links in the menu */
 #menu li {
-    display: block;
+  display: block;
 }
 
 /* Add a dark background color to the menu when it's open */
 #menu:target ~ .nav__item {
-    background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
 }

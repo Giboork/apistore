@@ -1,3 +1,3 @@
 export const config = {
-    webUrl: 'https://www.api.store',
+  webUrl: 'https://www.api.store',
 }

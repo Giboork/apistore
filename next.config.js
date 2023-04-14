@@ -4,10 +4,10 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  webpackDevMiddleware: (config) => {
+  webpackDevMiddleware: config => {
     // Ignore changes in node_modules
-    config.watchOptions.ignored = /node_modules/;
-    return config;
+    config.watchOptions.ignored = /node_modules/
+    return config
   },
 }
 
