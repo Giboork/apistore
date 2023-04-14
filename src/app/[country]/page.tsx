@@ -29,7 +29,7 @@ export async function generateMetadata(a: any): Promise<Metadata> {
   }
 
   return baseHead({
-    title: `${aa.data.country.label} - Open Data API | API Store`,
+    title: `${aa.data.country.label} open data in a single API request`,
     fullPath: `/${a.params.country}`,
   })
 }

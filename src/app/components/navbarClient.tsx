@@ -9,10 +9,6 @@ export default function NavbarClient() {
     setMobileMenuOpen(!mobileMenuOpen)
   }
 
-  const aa = () => {
-    window.hellobar.trigger.event('added_to_cart')
-  }
-
   return (
     <nav className="container relative flex flex-wrap items-center justify-between p-8 pb-2 mx-auto lg:justify-between xl:px-0">
       <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
@@ -106,12 +102,11 @@ export default function NavbarClient() {
             </a>
           </li>
         </ul>{' '}
-        <button onClick={aa}>Add to Cart</button>
       </div>
       <div className="hidden mr-3 space-x-4 lg:flex nav__item">
         <a
-          className="px-6 py-2 text-white bg-blue-600 rounded-md md:ml-5"
-          id="contact-us-desctop"
+          className="px-6 py-2 text-white bg-blue-600 rounded-md md:ml-5 cursor-pointer"
+          id="contact-us-desktop"
         >
           Contact us
         </a>

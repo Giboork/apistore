@@ -159,7 +159,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener"
               id="contact-us-footer"
-              className="inline-block py-3 mx-auto text-lg font-medium text-center text-blue-600 bg-white rounded-md px-7 lg:px-10 lg:py-5 "
+              className="inline-block py-3 mx-auto text-lg font-medium text-center text-blue-600 bg-white rounded-md px-7 lg:px-10 lg:py-5 cursor-pointer"
             >
               Contact us
             </a>

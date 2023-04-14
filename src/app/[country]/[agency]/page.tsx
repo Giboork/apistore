@@ -28,8 +28,8 @@ export async function generateMetadata(a: any): Promise<Metadata> {
   }
 
   return baseHead({
-    title: `${aa.data.country.label} - Open Data API | API Store`,
-    fullPath: `/${a.params.country}/${a.params.agency}`,
+    title: `${aa.data.country.label} open data in a single API request`,
+    fullPath: `Explore ${a.params.agency} Open Data APIs at API Store. Open Data API marketplace to help developers build their applications quickly and easily.`,
   })
 }
 

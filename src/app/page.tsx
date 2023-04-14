@@ -16,7 +16,10 @@ import type { Metadata } from 'next'
 import { baseHead } from './modules/head'
 
 export async function generateMetadata(): Promise<Metadata> {
-  return baseHead({})
+  return baseHead({
+      description: 'Explore European Open Data APIs at API Store. Open Data API marketplace to help developers build their applications quickly and easily.',
+      title: 'European open data in a single API request'
+  })
 }
 
 export default async function Home() {

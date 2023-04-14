@@ -24,7 +24,8 @@ export async function generateMetadata(a: any): Promise<Metadata> {
   const title = mainLanguageText(aa.data.title)
 
   return baseHead({
-    title: `${aa.data.catalog?.publisher?.name} API - ${aa.data?.country?.label} - Open Data API | API Store`,
+    title: `${title} open data in a single API request`,
+    description: `Explore ${title} API at API Store. Open Data API marketplace to help developers build their applications quickly and easily.`,
     fullPath: `/${a.params.country}/${a.params.agency}/${a.params.dataset}`,
   })
 }
