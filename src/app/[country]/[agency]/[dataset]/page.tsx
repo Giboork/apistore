@@ -10,6 +10,7 @@ import { formatISODate } from '@/app/tool/date'
 import { Metadata } from 'next/types'
 import { truncateText } from '@/app/tool/string'
 import { baseHead } from '@/app/modules/head'
+import {errorLog} from "../../../modules/db/erroLog";
 
 export async function generateMetadata(a: any): Promise<Metadata> {
   const connect = await getDatasetCollection()
@@ -38,6 +39,7 @@ export default async function Home(a: any) {
   })) as any
 
   if (!country) {
+    errorLog(404, `/${a.params.country}/${a.params.agency}/${a.params.dataset}`)
     notFound()
   }
 

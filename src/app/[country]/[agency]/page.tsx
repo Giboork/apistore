@@ -14,6 +14,7 @@ import { mainLanguageText } from '@/app/tool/translate'
 import NavigationBar from '../../components/navigationBar'
 import { Metadata } from 'next/types'
 import { baseHead } from '@/app/modules/head'
+import {errorLog} from "../../modules/db/erroLog";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -76,6 +77,7 @@ export default async function Home(a: any) {
   const totalPages = Math.ceil(totalResults / limit)
 
   if (country.length === 0) {
+    errorLog(404, `/${a.params.country}/${a.params.agency}`)
     notFound()
   }
 

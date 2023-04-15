@@ -1,9 +1,6 @@
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import { MongoClient } from 'mongodb'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import styles from './page.module.css'
 import { getDatasetCollection } from '../modules/db/connect'
 import { addApiSuffix, removeApiSuffix } from '../tool/url'
 import Container from '../components/container'
@@ -12,9 +9,8 @@ import { truncateText } from '../tool/string'
 import Technology from '../components/technology'
 import { mainLanguageText } from '../tool/translate'
 import { Metadata } from 'next'
-import { errorLog } from '../modules/db/erroLog'
 import { baseHead } from '../modules/head'
-import { headers } from 'next/headers'
+import {errorLog} from "../modules/db/erroLog";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -54,7 +50,7 @@ export default async function Home(a: any) {
     .toArray()
 
   if (aa.length === 0) {
-    await errorLog(404, 'url---123')
+    errorLog(404, `/${a.params.country}`)
     notFound()
   }
 
