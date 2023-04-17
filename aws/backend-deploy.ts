@@ -19,5 +19,9 @@ new BackendStack(app, 'apistore-react-stack', {
       domain: 'test.api.store',
       lbPriority: 11,
     },
+    {
+      domain: 'www.api.store',
+      lbPriority: 12,
+    },
   ],
 })
