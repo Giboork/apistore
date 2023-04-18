@@ -3,7 +3,7 @@ import Image from 'next/image'
 import RevolgyLogo from '../img/Revolgy_Logo.svg'
 
 interface Props {
-  agencyName: any[]
+  agencyName: string
 }
 
 export default function AccessBlock(props: Props) {
@@ -24,7 +24,8 @@ export default function AccessBlock(props: Props) {
           target="_blank"
           rel="noopener"
           id="early-access"
-          className="inline-block py-3 mx-auto text-lg font-medium text-center text-blue-600 bg-white rounded-md px-7 lg:px-10 lg:py-5 cursor-pointer"
+          data-sumome-listbuilder-id="eb223b39-5410-4aef-b588-ac2a462bdacf"
+          className="the_name_of_select_class inline-block py-3 mx-auto text-lg font-medium text-center text-blue-600 bg-white rounded-md px-7 lg:px-10 lg:py-5 cursor-pointer"
         >
           Get early access
         </a>

@@ -29,7 +29,7 @@ export async function generateMetadata(a: any): Promise<Metadata> {
   }
 
   return baseHead({
-    title: `${truncateText(mainLanguageText(aa.data.catalog.title))} open data in a single API request`,
+    title: `${truncateText(mainLanguageText(aa.data.catalog?.title))} open data in a single API request`,
     fullPath: `Explore ${a.params.agency} Open Data APIs at API Store. Open Data API marketplace to help developers build their applications quickly and easily.`,
   })
 }
@@ -84,7 +84,7 @@ export default async function Home(a: any) {
 
   const firstData = country[0].data
 
-  const title = truncateText(mainLanguageText(firstData.catalog.title))
+  const title = truncateText(mainLanguageText(firstData.catalog.title)) as string
 
   const links = [
     ['/', 'Home'],

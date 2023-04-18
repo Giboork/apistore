@@ -8,6 +8,7 @@ interface Dataset {
         name: string
         name_url: string
       }
+      title: any
     }
     country: {
       label: string
