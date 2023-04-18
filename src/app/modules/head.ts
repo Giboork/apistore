@@ -26,7 +26,7 @@ const baseHead = ({
   title = 'API Store - Open European Data API',
   description = 'Explore and preview European Open Data APIs at API.store. Our comprehensive API marketplace offers a variety of APIs to help developers build their applications quickly and easily.',
 }: HeadOptions): Metadata => {
-  const titleTrun = truncateString(title, 50)
+  const titleTrun = title
   const descriptionTrun = truncateString(description, 150)
 
   return {

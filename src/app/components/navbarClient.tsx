@@ -1,6 +1,8 @@
 'use client'
 
-import { useState } from 'react'
+import {useEffect, useState} from 'react'
+
+
 
 export default function NavbarClient() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -8,6 +10,17 @@ export default function NavbarClient() {
   const handleToggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen)
   }
+
+  useEffect(() => {
+
+    document.body.addEventListener('click', function(event: any) {
+      if (event.target.classList.contains('modal-contact')) {
+        (document.querySelector("#contact-us-desktop") as any).click();
+      }
+    });
+
+
+  }, []);
 
   return (
     <nav className="container relative flex flex-wrap items-center justify-between p-8 pb-2 mx-auto lg:justify-between xl:px-0">
@@ -106,6 +119,7 @@ export default function NavbarClient() {
       <div className="hidden mr-3 space-x-4 lg:flex nav__item">
         <a
           className="px-6 py-2 text-white bg-blue-600 rounded-md md:ml-5 cursor-pointer"
+          data-sumome-listbuilder-id="eb223b39-5410-4aef-b588-ac2a462bdacf"
           id="contact-us-desktop"
         >
           Contact us
