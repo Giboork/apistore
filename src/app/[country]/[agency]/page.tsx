@@ -29,7 +29,7 @@ export async function generateMetadata(a: any): Promise<Metadata> {
   }
 
   return baseHead({
-    title: `${aa.data.country.label} open data in a single API request`,
+    title: `${truncateText(mainLanguageText(aa.data.catalog.title))} open data in a single API request`,
     fullPath: `Explore ${a.params.agency} Open Data APIs at API Store. Open Data API marketplace to help developers build their applications quickly and easily.`,
   })
 }
@@ -59,6 +59,7 @@ export default async function Home(a: any) {
           'data.catalog.description': 1,
           'data.country.label': 1,
           'data.country.label_url': 1,
+          'data.catalog.title': 1
         },
       },
       {
@@ -83,13 +84,15 @@ export default async function Home(a: any) {
 
   const firstData = country[0].data
 
+  const title = truncateText(mainLanguageText(firstData.catalog.title))
+
   const links = [
     ['/', 'Home'],
     [
       `/${addApiSuffix(firstData.country.label_url)}`,
       `${firstData.country.label} Data APIs`,
     ],
-    [``, `${truncateText(firstData.catalog.publisher.name)}`],
+    [``, `${title}`],
   ]
 
   return (
@@ -102,7 +105,7 @@ export default async function Home(a: any) {
           <div className=" text-center items-center justify-center text-center">
             <h1 className=" text-center text-4xl font-bolclassNameding-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
               <span className="text-blue-500">
-                {firstData.catalog.publisher.name}{' '}
+                {title}
               </span>{' '}
               Open data in a single API request
             </h1>
@@ -114,14 +117,14 @@ export default async function Home(a: any) {
               </div>
             </div>
 
-            <AccessBlock agencyName={firstData.catalog.publisher.name} />
+            <AccessBlock agencyName={title} />
 
             <div className="container p-8 mx-classNamexl:px-0 flex w-full flex-col mt-4 items-center justify-center text-center">
               <div className="text-sm font-bold tracking-wider text-blue-600 uppercase">
                 Available datasets
               </div>
               <h2 className="max-w-2xl mt-3 teclassNamel font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
-                Open data Portal {firstData.country.label} Open Data API in
+                Open data Portal {title} Open Data API in
                 development
               </h2>
 
