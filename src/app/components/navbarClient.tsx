@@ -85,7 +85,7 @@ export default function NavbarClient() {
               About Apitalkss
             </a>
             <a
-              className="w-full px-6 py-2 mt-3 text-center text-white bg-blue-600 rounded-md lg:ml-5"
+              className="modal-contact w-full px-6 py-2 mt-3 text-center text-white bg-blue-600 rounded-md lg:ml-5"
               id="contact-us-phone"
             >
               Contact us
