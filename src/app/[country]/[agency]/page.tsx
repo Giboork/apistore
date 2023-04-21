@@ -62,7 +62,7 @@ export default async function Home(a: any) {
       .find(filter, { projection })
       .skip(startIndex)
       .limit(limit)
-      .toArray();
+      .toArray() as any[];
 
   const totalResults = await connect.count({
     'data.catalog.publisher.name_url': removeApiSuffix(a.params.agency),
