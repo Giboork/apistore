@@ -40,36 +40,29 @@ export default async function Home(a: any) {
   const page = parseInt(a?.searchParams?.page || 1)
   const limit = 100
   const startIndex = (page - 1) * limit
+  const filter = {
+    'data.catalog.publisher.name_url': removeApiSuffix(a.params.agency),
+    'data.country.label_url': removeApiSuffix(a.params.country),
+  };
+
+  const projection = {
+    'data.catalog.publisher.name_url': 1,
+    'data.catalog.publisher.name': 1,
+    'data.issued': 1,
+    'data.title': 1,
+    'data.description': 1,
+    'data.catalog.modified': 1,
+    'data.catalog.description': 1,
+    'data.country.label': 1,
+    'data.country.label_url': 1,
+    'data.catalog.title': 1
+  };
+
   const country = await connect
-    .aggregate([
-      {
-        $match: {
-          'data.catalog.publisher.name_url': removeApiSuffix(a.params.agency),
-          'data.country.label_url': removeApiSuffix(a.params.country),
-        },
-      },
-      {
-        $project: {
-          'data.catalog.publisher.name_url': 1,
-          'data.catalog.publisher.name': 1,
-          'data.issued': 1,
-          'data.title': 1,
-          'data.description': 1,
-          'data.catalog.modified': 1,
-          'data.catalog.description': 1,
-          'data.country.label': 1,
-          'data.country.label_url': 1,
-          'data.catalog.title': 1
-        },
-      },
-      {
-        $skip: startIndex,
-      },
-      {
-        $limit: limit,
-      },
-    ])
-    .toArray()
+      .find(filter, { projection })
+      .skip(startIndex)
+      .limit(limit)
+      .toArray();
 
   const totalResults = await connect.count({
     'data.catalog.publisher.name_url': removeApiSuffix(a.params.agency),
