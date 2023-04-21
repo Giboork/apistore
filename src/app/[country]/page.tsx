@@ -91,6 +91,7 @@ export default async function Home(a: any) {
           <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
             {aa.map((item, index) => (
               <Link
+                  prefetch={false}
                 href={`/${a.params.country}/${
                   addApiSuffix(item.data.catalog.publisher.name_url) ?? ''
                 }`}

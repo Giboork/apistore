@@ -32,6 +32,7 @@ export default function NavigationBar(props: Props) {
             key={index}
           >
             <Link
+                prefetch={false}
               href={link}
               className={` ${
                 index === links.length - 1

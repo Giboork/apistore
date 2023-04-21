@@ -16,6 +16,7 @@ export default function Testimonials(a: { aa: any[] }) {
           <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
             {a.aa.map((item, index) => (
               <Link
+                  prefetch={false}
                 href={addApiSuffix(item.data?.country?.label_url) ?? ''}
                 key={index}
               >
