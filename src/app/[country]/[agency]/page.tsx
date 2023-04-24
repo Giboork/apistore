@@ -20,9 +20,14 @@ const inter = Inter({ subsets: ['latin'] })
 
 export async function generateMetadata(a: any): Promise<Metadata> {
   const connect = await getDatasetCollection()
+
+  const projection = {
+    'data.catalog.title': 1
+  };
+
   const aa = await connect.findOne({
     'data.catalog.publisher.name_url': removeApiSuffix(a.params.agency),
-  })
+  }, {projection}) as any
 
   if (!aa) {
     return {}
@@ -37,11 +42,34 @@ export async function generateMetadata(a: any): Promise<Metadata> {
 export default async function Home(a: any) {
   const connect = await getDatasetCollection()
 
-  const page = parseInt(a?.searchParams?.page || 1)
+  function getPageNumber(url) {
+    const regex = /-page-(\d+)/;
+    const match = url.match(regex);
+
+    if (match && match[1]) {
+      return parseInt(match[1], 10);
+    } else {
+      return 1;
+    }
+  }
+
+  console.log(a, 'aaa')
+
+  const page = getPageNumber(a?.params?.agency)
+  console.log(page, '' +
+      '')
+
+  function removePageNumber(inputString) {
+    const regex = /-page%3D\d+/;
+    return inputString.replace(regex, '');
+  }
+
+  console.log(removePageNumber(a.params.agency), 'removePageNumber(a.params.agency)removePageNumber(a.params.agency)')
+
   const limit = 100
   const startIndex = (page - 1) * limit
   const filter = {
-    'data.catalog.publisher.name_url': removeApiSuffix(a.params.agency),
+    'data.catalog.publisher.name_url': removeApiSuffix(removePageNumber(a.params.agency)),
     'data.country.label_url': removeApiSuffix(a.params.country),
   };
 
@@ -64,8 +92,11 @@ export default async function Home(a: any) {
       .limit(limit)
       .toArray() as any[];
 
-  const totalResults = await connect.count({
-    'data.catalog.publisher.name_url': removeApiSuffix(a.params.agency),
+  console.timeEnd('queryTime');
+
+  const totalResults = await connect.countDocuments({
+    'data.catalog.publisher.name_url': removeApiSuffix(removePageNumber(a.params.agency)),
+    'data.country.label_url': removeApiSuffix(a.params.country),
   })
 
   const totalPages = Math.ceil(totalResults / limit)
@@ -143,7 +174,7 @@ export default async function Home(a: any) {
                     item.data.catalog.publisher.name_url || ''
                   )}
                   itemUrl={`/${a.params.country}/${
-                    a.params.agency
+                      removePageNumber(a.params.agency)
                   }/${addApiSuffix(item.data.title?.en_url)}`}
                 />
               ))}
@@ -156,7 +187,7 @@ export default async function Home(a: any) {
           <Pagination
             currentPage={page}
             totalPages={totalPages}
-            basePath={`${a.params.country}/${a.params.agency}`}
+            basePath={`${a.params.country}/${removePageNumber(a.params.agency)}`}
           />
         </Container>
         <Container className="p-0 pb-5" p={0}>
