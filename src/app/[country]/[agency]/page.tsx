@@ -90,9 +90,8 @@ export default async function Home(a: any) {
       .find(filter, { projection })
       .skip(startIndex)
       .limit(limit)
-      .toArray() as any[];
+      .toArray() as any[]
 
-  console.timeEnd('queryTime');
 
   const totalResults = await connect.countDocuments({
     'data.catalog.publisher.name_url': removeApiSuffix(removePageNumber(a.params.agency)),

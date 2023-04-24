@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div>
+        <div className="xl:px-20">
           <Navbar />
           {children}
           <Footer />
