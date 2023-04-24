@@ -42,7 +42,7 @@ export async function generateMetadata(a: any): Promise<Metadata> {
 export default async function Home(a: any) {
   const connect = await getDatasetCollection()
 
-  function getPageNumber(url) {
+  function getPageNumber(url: any) {
     const regex = /-page-(\d+)/;
     const match = url.match(regex);
 
@@ -59,7 +59,7 @@ export default async function Home(a: any) {
   console.log(page, '' +
       '')
 
-  function removePageNumber(inputString) {
+  function removePageNumber(inputString: any) {
     const regex = /-page%3D\d+/;
     return inputString.replace(regex, '');
   }
