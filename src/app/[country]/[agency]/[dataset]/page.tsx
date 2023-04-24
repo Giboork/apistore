@@ -11,6 +11,7 @@ import { Metadata } from 'next/types'
 import { truncateText } from '@/app/tool/string'
 import { baseHead } from '@/app/modules/head'
 import {errorLog} from "../../../modules/db/erroLog";
+import GtmEventClient from "../../../components/gtmEvent";
 
 export async function generateMetadata(a: any): Promise<Metadata> {
   const connect = await getDatasetCollection()
@@ -67,6 +68,7 @@ export default async function Home(a: any) {
 
   return (
     <div>
+      <GtmEventClient customEvent={{type: 'dataset'}} />
       <Container className="p-0 pb-5" p={0}>
         <NavigationBar links={links} />
       </Container>

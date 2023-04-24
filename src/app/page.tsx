@@ -14,6 +14,7 @@ import Container from './components/container'
 import type { GetStaticProps } from 'next'
 import type { Metadata } from 'next'
 import { baseHead } from './modules/head'
+import GtmEventClient from "./components/gtmEvent";
 
 export async function generateMetadata(): Promise<Metadata> {
   return baseHead({
@@ -108,6 +109,8 @@ export default async function Home() {
           </div>
         </Container>
       </div>
+
+        <GtmEventClient customEvent={{type: 'homepage'}} />
     </div>
   )
 }

@@ -15,7 +15,7 @@ export default function Hero(props: any) {
             </h1>
             <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
               Save development time and costs by using fast, scalable and
-              reliable REST API interface to Europian Open Data.
+              reliable REST API interface to European Open Data.
             </p>
 
             <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">

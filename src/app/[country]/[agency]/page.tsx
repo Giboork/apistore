@@ -15,6 +15,7 @@ import NavigationBar from '../../components/navigationBar'
 import { Metadata } from 'next/types'
 import { baseHead } from '@/app/modules/head'
 import {errorLog} from "../../modules/db/erroLog";
+import GtmEventClient from "../../components/gtmEvent";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -120,10 +121,12 @@ export default async function Home(a: any) {
 
   return (
     <div>
+      <GtmEventClient customEvent={{type: 'agency'}} />
       <Container className="p-0 pb-5" p={0}>
         <NavigationBar links={links} />
       </Container>
       <div>
+
         <Container>
           <div className=" text-center items-center justify-center text-center">
             <h1 className=" text-center text-4xl font-bolclassNameding-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">

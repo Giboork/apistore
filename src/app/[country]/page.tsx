@@ -11,6 +11,7 @@ import { mainLanguageText } from '../tool/translate'
 import { Metadata } from 'next'
 import { baseHead } from '../modules/head'
 import {errorLog} from "../modules/db/erroLog";
+import GtmEventClient from "../components/gtmEvent";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -64,6 +65,8 @@ export default async function Home(a: any) {
 
   return (
     <div>
+      <GtmEventClient customEvent={{type: 'country'}} />
+
       <Container className="p-0" p={0}>
         <NavigationBar links={links} />
       </Container>
