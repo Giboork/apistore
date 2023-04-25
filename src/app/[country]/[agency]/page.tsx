@@ -19,6 +19,11 @@ import GtmEventClient from "../../components/gtmEvent";
 
 const inter = Inter({ subsets: ['latin'] })
 
+
+function removePageNumber(inputString: any) {
+  return inputString.replace(/-page-\d+/, '');
+}
+
 export async function generateMetadata(a: any): Promise<Metadata> {
   const connect = await getDatasetCollection()
 
@@ -27,7 +32,7 @@ export async function generateMetadata(a: any): Promise<Metadata> {
   };
 
   const aa = await connect.findOne({
-    'data.catalog.publisher.name_url': removeApiSuffix(a.params.agency),
+    'data.catalog.publisher.name_url': removeApiSuffix(removePageNumber(a.params.agency)),
   }, {projection}) as any
 
   if (!aa) {
@@ -57,15 +62,9 @@ export default async function Home(a: any) {
   console.log(a, 'aaa')
 
   const page = getPageNumber(a?.params?.agency)
-  console.log(page, '' +
-      '')
 
-  function removePageNumber(inputString: any) {
-    const regex = /-page%3D\d+/;
-    return inputString.replace(regex, '');
-  }
 
-  console.log(removePageNumber(a.params.agency), 'removePageNumber(a.params.agency)removePageNumber(a.params.agency)')
+  console.log(page, 'removePageNumber(a.params.agency)removePageNumber(a.params.agency)')
 
   const limit = 100
   const startIndex = (page - 1) * limit
@@ -73,6 +72,12 @@ export default async function Home(a: any) {
     'data.catalog.publisher.name_url': removeApiSuffix(removePageNumber(a.params.agency)),
     'data.country.label_url': removeApiSuffix(a.params.country),
   };
+
+  console.log({
+    'data.catalog.publisher.name_url': removeApiSuffix(removePageNumber(a.params.agency)),
+    'data.country.label_url': removeApiSuffix(a.params.country),
+  }, 'removeApiSuffix(removePageNumber(a.params.agency))removeApiSuffix(removePageNumber(a.params.agency))')
+  console.log(removeApiSuffix(a.params.country), '11111111removeApiSuffix(removePageNumber(a.params.agency))removeApiSuffix(removePageNumber(a.params.agency))')
 
   const projection = {
     'data.catalog.publisher.name_url': 1,

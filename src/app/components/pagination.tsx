@@ -14,7 +14,7 @@ const Pagination: React.FC<PaginationProps> = ({
   const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1)
 
   const url = (pageNumber: number) => {
-    const prefx = pageNumber === 1 ? '' : `-page=${pageNumber}`
+    const prefx = pageNumber === 1 ? '' : `-page-${pageNumber}`
 
     return `/${basePath}${prefx}`
   }
