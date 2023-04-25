@@ -27,7 +27,7 @@ export const mongoConnect = async (): Promise<MongoClient> => {
   if (!client) {
     // const uri = 'mongodb://localhost'
     const uri =
-      'mongodb+srv://doadmin:f5FC26EY3k8h1v40@db-mongodb-nyc1-70024-3d044262.mongo.ondigitalocean.com/'
+      'mongodb+srv://apistore:EbM8bK0E7kv2t1PE@cluster-apistore.twb1g.mongodb.net'
     client = await MongoClient.connect(uri, { useNewUrlParser: true } as any)
   }
 
