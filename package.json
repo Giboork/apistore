@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 8001",
+    "start": "next start -p 8000",
     "build:css": "tailwindcss -i src/style.css -o public/style.css --minify",
     "lint": "next lint",
     "lint-fix": "npx prettier --write .",
