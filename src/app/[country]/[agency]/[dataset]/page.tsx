@@ -39,10 +39,12 @@ export default async function Home(a: any) {
     'data.catalog.publisher.name_url': removeApiSuffix(a.params.agency),
   })) as any
 
+
   if (!country) {
     errorLog(404, `/${a.params.country}/${a.params.agency}/${a.params.dataset}`)
     notFound()
   }
+
 
   const firstData = country.data
 

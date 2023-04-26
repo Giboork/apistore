@@ -7,7 +7,6 @@ import TestimonialBase from '../../components/testimonialsBase'
 import Container from '../../components/container'
 import { truncateText } from '../../tool/string'
 import Pagination from '../../components/pagination'
-import { formatISODate } from '../../tool/date'
 import AccessBlock from '../../components/access'
 import Technology from '../../components/technology'
 import { mainLanguageText } from '@/app/tool/translate'
@@ -59,25 +58,15 @@ export default async function Home(a: any) {
     }
   }
 
-  console.log(a, 'aaa')
-
   const page = getPageNumber(a?.params?.agency)
-
-
-  console.log(page, 'removePageNumber(a.params.agency)removePageNumber(a.params.agency)')
 
   const limit = 100
   const startIndex = (page - 1) * limit
   const filter = {
     'data.catalog.publisher.name_url': removeApiSuffix(removePageNumber(a.params.agency)),
     'data.country.label_url': removeApiSuffix(a.params.country),
+     'data.page_publisher': page
   };
-
-  console.log({
-    'data.catalog.publisher.name_url': removeApiSuffix(removePageNumber(a.params.agency)),
-    'data.country.label_url': removeApiSuffix(a.params.country),
-  }, 'removeApiSuffix(removePageNumber(a.params.agency))removeApiSuffix(removePageNumber(a.params.agency))')
-  console.log(removeApiSuffix(a.params.country), '11111111removeApiSuffix(removePageNumber(a.params.agency))removeApiSuffix(removePageNumber(a.params.agency))')
 
   const projection = {
     'data.catalog.publisher.name_url': 1,
@@ -89,27 +78,23 @@ export default async function Home(a: any) {
     'data.catalog.description': 1,
     'data.country.label': 1,
     'data.country.label_url': 1,
-    'data.catalog.title': 1
+    'data.catalog.title': 1,
+    'data.page_publisher': 1,
+    'data.page_total_publisher': 1,
   };
 
   const country = await connect
       .find(filter, { projection })
-      .skip(startIndex)
       .limit(limit)
       .toArray() as any[]
 
-
-  const totalResults = await connect.countDocuments({
-    'data.catalog.publisher.name_url': removeApiSuffix(removePageNumber(a.params.agency)),
-    'data.country.label_url': removeApiSuffix(a.params.country),
-  })
-
-  const totalPages = Math.ceil(totalResults / limit)
 
   if (country.length === 0) {
     errorLog(404, `/${a.params.country}/${a.params.agency}`)
     notFound()
   }
+
+  const totalPages = country[0].data.page_total_publisher
 
   const firstData = country[0].data
 
