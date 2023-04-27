@@ -33,6 +33,7 @@ const baseHead = ({
     title: titleTrun,
     description: descriptionTrun,
     openGraph: {
+      type: 'article',
       title: titleTrun,
       description: descriptionTrun,
       images: [`${config.webUrl}/img/logo.svg`],
