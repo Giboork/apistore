@@ -1,8 +1,7 @@
 trigger:
   - master
 
-pool:
-  vmImage: ubuntu-latest
+pool: "Qest Linux"
 
 steps:
   - task: NodeTool@0
