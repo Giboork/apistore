@@ -33,6 +33,7 @@ export async function generateMetadata(a: any): Promise<Metadata> {
 }
 
 export default async function Home(a: any) {
+
   const connect = await getDatasetCollection()
   const country = (await connect.findOne({
     'data.title.en_url': removeApiSuffix(a.params.dataset),

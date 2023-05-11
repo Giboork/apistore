@@ -1,3 +1,5 @@
+export const revalidate = 10
+
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import { MongoClient } from 'mongodb'
@@ -25,7 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function Home() {
   const connect = await getDatasetCollection()
-
+  const date = Date.now();
   const aa = await connect
     .aggregate([
       {
@@ -55,6 +57,7 @@ export default async function Home() {
 
   return (
     <div>
+      {JSON.stringify(date)}
       <Hero />
 
       <SectionTitle
