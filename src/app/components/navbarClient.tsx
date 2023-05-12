@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import {useEffect, useState} from 'react'
 
 
@@ -26,7 +27,7 @@ export default function NavbarClient() {
   return (
     <nav className="container relative flex flex-wrap items-center justify-between p-8 pb-2 mx-auto lg:justify-between xl:px-0">
       <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
-        <a
+        <Link
           className="flex items-center space-x-2 text-2xl font-medium dark:text-gray-100 hover:text-blue-500"
           href="/"
         >
@@ -34,7 +35,7 @@ export default function NavbarClient() {
             <img src="/img/logo.svg" alt="N" height={48} className="w-12" />
           </span>
           <span>API Store ®</span>
-        </a>
+        </Link>
         <input type="checkbox" id="toggle-menu" className="hidden" />
         <label
           htmlFor="toggle-menu"
